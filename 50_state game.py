@@ -16,10 +16,6 @@ while len(guessed_state) < 50:
     answer_atate = screen.textinput(title=f"{len(guessed_state)/50}Guess the state",
                                     prompt="What's another state's name?").title() #the first letter need to be big
     if answer_atate == "Exit":
-        missing_state = []
-        for state in all_states:
-            if state not in guessed_state:
-                missing_state.append(state)
         break
     if answer_atate in all_states:
         guessed_state.append(answer_atate)
